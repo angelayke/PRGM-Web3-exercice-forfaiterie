@@ -64,7 +64,7 @@ export class ListeForfaitsComponent implements OnInit {
     dateDebut: '2022-11-14',
     dateFin: '2022-11-21',
     prix: 239,
-    avis: [] = [ {note: 8, commentaires: 'Commentaire sur le forfait machin'} ]
+    avis: [] = [ {note: 6, commentaires: 'Commentaire sur le forfait activité'} ]
   }
   constructor() { }
 
