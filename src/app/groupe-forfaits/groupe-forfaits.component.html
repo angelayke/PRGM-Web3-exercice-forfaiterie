@@ -1,0 +1,17 @@
+
+<div>
+    <mat-card class="example-card">
+        <mat-card-title-group>
+        <mat-card-title>{{forfait?.nom}}</mat-card-title>
+        <mat-card-subtitle>{{forfait?.etablissement?.nomEtablissement}}</mat-card-subtitle>
+        <img mat-card-sm-image src="https://fakeimg.pl/250/" >
+        </mat-card-title-group>
+        <mat-card-content><h2>{{forfait?.prix}}$</h2></mat-card-content>
+        <mat-card-content>
+            <p>Date de début: {{forfait?.dateDebut}} <br>
+               Date de fin: {{forfait?.dateFin}}</p>
+       
+        </mat-card-content>
+    </mat-card>
+</div>
+ 

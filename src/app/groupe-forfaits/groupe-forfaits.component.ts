@@ -1,17 +1,15 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Forfait } from '../forfait';
 import { Etablissement } from '../etablissement';
-import { Avis } from '../avis';
 
 @Component({
-  selector: 'app-forfait',
-  templateUrl: './forfait.component.html',
-  styleUrls: ['./forfait.component.css']
+  selector: 'app-groupe-forfaits',
+  templateUrl: './groupe-forfaits.component.html',
+  styleUrls: ['./groupe-forfaits.component.css']
 })
-export class ForfaitComponent implements OnInit {
+export class GroupeForfaitsComponent implements OnInit {
   @Input() forfait?: Forfait;
   @Input() etablissement?: Etablissement;
-  @Input() avis?: Avis;
 
   constructor() { }
 

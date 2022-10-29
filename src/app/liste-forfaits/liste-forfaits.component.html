@@ -1,2 +1,6 @@
-<p>liste-forfaits works!</p>
+<p>liste-forfaits</p>
+<div  class="flex-container">
+    <app-groupe-forfaits *ngFor="let f of forfaits" [forfait]="f"></app-groupe-forfaits>
+</div>
+
 <app-forfait *ngFor="let f of forfaits" [forfait]="f"></app-forfait>
