@@ -1,5 +1,6 @@
 <div>
     <h4>{{forfait?.categories}}</h4>
+    <div>{{forfait?.avis}}</div>
     <div>
         <h1>{{forfait?.nom}}</h1>
         <p><em>Code: {{forfait?.code}}</em></p>
@@ -9,7 +10,7 @@
     </div>
    
     <p><strong>Description:</strong> {{forfait?.description}}</p>
-    <p>Lieu: {{forfait?.etablissement}}</p>
+    <p>Lieu: {{forfait?.etablissement?.nomEtablissement}}</p>
     <p>Date de début: {{forfait?.dateDebut}}</p>
     <p>Date de fin: {{forfait?.dateFin}}</p>
     <div></div>
