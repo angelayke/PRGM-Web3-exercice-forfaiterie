@@ -11,6 +11,7 @@ export const FORFAITS: Forfait[] = [
         dateDebut: '2022-10-18',
         dateFin: '2022-10-21',
         prix: 149,
+        nouveauprix: 119,
         avis: [
           {note: 9, commentaires:'Commentaire sur le forfait machin'},
           {note: 7, commentaires: 'Commentaire sur le forfait Trucmuche'},
@@ -28,6 +29,7 @@ export const FORFAITS: Forfait[] = [
         dateDebut: '2022-10-31',
         dateFin: '2022-11-02',
         prix: 99,
+        nouveauprix: 79,
         avis: [
             {note: 8, commentaires:'Commentaire sur le forfait machin'},
             {note: 7, commentaires: 'Commentaire sur le forfait Trucmuche'},
@@ -45,6 +47,7 @@ export const FORFAITS: Forfait[] = [
         dateDebut: '2022-11-14',
         dateFin: '2022-11-21',
         prix: 239,
+        nouveauprix: 199,
         avis: [
           {note:2, commentaires:'Commentaire sur le forfait machin'},
           {note: 5, commentaires: 'Commentaire sur le forfait Trucmuche'},
