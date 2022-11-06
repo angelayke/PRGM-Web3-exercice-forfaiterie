@@ -33,7 +33,6 @@ export const FORFAITS: Forfait[] = [
         avis: [
             {note: 8, commentaires:'Commentaire sur le forfait machin'},
             {note: 7, commentaires: 'Commentaire sur le forfait Trucmuche'},
-            {note: 8, commentaires: 'Commentaire sur le forfait machin'},
             {note: 6, commentaires: 'Commentaire sur le forfait activité'}
         ]
       },
@@ -50,7 +49,6 @@ export const FORFAITS: Forfait[] = [
         nouveauprix: 199,
         avis: [
           {note:2, commentaires:'Commentaire sur le forfait machin'},
-          {note: 5, commentaires: 'Commentaire sur le forfait Trucmuche'},
           {note: 4, commentaires: 'Commentaire sur le forfait machin'},
           {note: 1, commentaires: 'Commentaire sur le forfait activité'}
       ]
