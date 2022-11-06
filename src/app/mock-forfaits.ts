@@ -47,6 +47,7 @@ export const FORFAITS: Forfait[] = [
         dateFin: '2022-11-21',
         prix: 239,
         nouveauprix: 199,
+
         avis: [
           {note:2, commentaires:'Commentaire sur le forfait machin'},
           {note: 4, commentaires: 'Commentaire sur le forfait machin'},

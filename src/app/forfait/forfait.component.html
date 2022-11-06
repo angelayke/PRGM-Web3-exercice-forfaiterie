@@ -5,8 +5,9 @@
         <h1>{{forfait?.nom}}</h1>
         <p><em>Code: {{forfait?.code}}</em></p>
     </div>
-    <div>
-        <h2>{{forfait?.prix}}$</h2>
+    <div class="flex-container">
+        <h2 [ngClass]="'color'">{{forfait?.nouveauprix}}$</h2>
+        <h4 [ngClass]="'line'">{{forfait?.prix}}$</h4>
     </div>
    
     <p><strong>Description:</strong> {{forfait?.description}}</p>
