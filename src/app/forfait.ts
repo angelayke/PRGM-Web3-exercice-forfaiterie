@@ -14,4 +14,5 @@ export interface Forfait {
     avis: Avis[];
     premium?: boolean;
     color?: string;
+    economie?: number;
 }

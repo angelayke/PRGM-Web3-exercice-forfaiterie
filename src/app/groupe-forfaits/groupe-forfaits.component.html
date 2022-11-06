@@ -6,7 +6,13 @@
         <mat-card-subtitle>{{forfait?.etablissement?.nomEtablissement}}</mat-card-subtitle>
         <img mat-card-sm-image src="https://fakeimg.pl/250/" >
         </mat-card-title-group>
-        <mat-card-content><h2>{{forfait?.prix}}$</h2></mat-card-content>
+        <mat-card-content>
+            <div class="flex-container">
+                <p [ngClass]="'color'">{{forfait?.nouveauprix}}$</p>
+                <h4 [ngClass]="'line'">{{forfait?.prix}}$</h4>
+            </div>
+            <p>Montant économisé: {{forfait?.economie}} $</p>
+        </mat-card-content>
         <mat-card-content>
             <p>Date de début: {{forfait?.dateDebut}} <br>
                Date de fin: {{forfait?.dateFin}}</p>
