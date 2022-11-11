@@ -5,11 +5,9 @@
         <h1>{{forfait?.nom}}</h1>
         <p><em>Code: {{forfait?.code}}</em></p>
     </div>
-    <div class="flex-container">
-        <h2 [ngClass]="'color'">{{forfait?.nouveauprix}}$</h2>
-        <h4 [ngClass]="'line'">{{forfait?.prix}}$</h4>
-    </div>
-    <p>Montant économisé: {{forfait?.economie}} $</p>
+ 
+    <app-prix [prix]="forfait?.prix || 0" [nouveauprix]="forfait?.nouveauprix"></app-prix>
+    <!-- <p>Montant économisé: {{forfait?.prix-forfait?.nouveauprix}} $</p>-->
    
     <p><strong>Description:</strong> {{forfait?.description}}</p>
     <p>Lieu: {{forfait?.etablissement?.nomEtablissement}}</p>

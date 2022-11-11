@@ -1,17 +1,14 @@
 
-<div>
+<div *ngIf="forfait?.premium==true">
     <mat-card class="example-card">
         <mat-card-title-group>
-        <mat-card-title>{{forfait?.nom}}</mat-card-title>
-        <mat-card-subtitle>{{forfait?.etablissement?.nomEtablissement}}</mat-card-subtitle>
-        <img mat-card-sm-image src="https://fakeimg.pl/250/" >
+            <mat-card-title>{{forfait?.nom}}</mat-card-title>
+            <mat-card-subtitle>{{forfait?.etablissement?.nomEtablissement}}</mat-card-subtitle>
+            <img mat-card-sm-image src="https://fakeimg.pl/250/" >
         </mat-card-title-group>
+        <br>
         <mat-card-content>
-            <div class="flex-container">
-                <p [ngClass]="'color'">{{forfait?.nouveauprix}}$</p>
-                <h4 [ngClass]="'line'">{{forfait?.prix}}$</h4>
-            </div>
-            <p>Montant économisé: {{forfait?.economie}} $</p>
+            <app-prix [prix]="forfait?.prix || 0" [nouveauprix]="forfait?.nouveauprix"></app-prix>
         </mat-card-content>
         <mat-card-content>
             <p>Date de début: {{forfait?.dateDebut}} <br>

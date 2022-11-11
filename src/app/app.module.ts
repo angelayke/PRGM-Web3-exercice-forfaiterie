@@ -8,13 +8,15 @@ import { ListeForfaitsComponent } from './liste-forfaits/liste-forfaits.componen
 import { ForfaitComponent } from './forfait/forfait.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GroupeForfaitsComponent } from './groupe-forfaits/groupe-forfaits.component';
+import { PrixComponent } from './prix/prix.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListeForfaitsComponent,
     ForfaitComponent,
-    GroupeForfaitsComponent
+    GroupeForfaitsComponent,
+    PrixComponent
   ],
   imports: [
     BrowserModule,

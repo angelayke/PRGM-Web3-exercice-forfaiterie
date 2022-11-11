@@ -12,7 +12,7 @@ export const FORFAITS: Forfait[] = [
         dateFin: '2022-10-21',
         prix: 149,
         nouveauprix: 119,
-        economie: 30,
+        premium: true,
         avis: [
           {note: 9, commentaires:'Commentaire sur le forfait machin'},
           {note: 7, commentaires: 'Commentaire sur le forfait Trucmuche'},
@@ -31,7 +31,7 @@ export const FORFAITS: Forfait[] = [
         dateFin: '2022-11-02',
         prix: 99,
         nouveauprix: 79,
-        economie: 20,
+        premium: false,
         avis: [
             {note: 8, commentaires:'Commentaire sur le forfait machin'},
             {note: 7, commentaires: 'Commentaire sur le forfait Trucmuche'},
@@ -49,11 +49,43 @@ export const FORFAITS: Forfait[] = [
         dateFin: '2022-11-21',
         prix: 239,
         nouveauprix: 199,
-        economie: 40,
+        premium: false,
         avis: [
           {note:2, commentaires:'Commentaire sur le forfait machin'},
           {note: 4, commentaires: 'Commentaire sur le forfait machin'},
           {note: 1, commentaires: 'Commentaire sur le forfait activité'}
+      ]
+      },
+
+      {
+        nom: 'Forfait Noël',
+        description: 'Description Noel ....',
+        code: 'AAA005',
+        categories:['Hébergement', 'Restauration', 'Activité intérieure'],
+        etablissement: ETABLISSEMENTS[1],
+        dateDebut: '2022-12-24',
+        dateFin: '2022-12-26',
+        prix: 249,
+        premium: true,
+        avis: [
+            {note: 8, commentaires:'Commentaire sur le forfait machin'},
+            {note: 7, commentaires: 'Commentaire sur le forfait Trucmuche'},
+        ]
+      },
+    
+      {
+        nom: 'Forfait Husky',
+        description: 'Chien de traineau ....',
+        code: 'AAA005',
+        categories:[ 'Nature', 'Activités extérieures'],
+        etablissement: ETABLISSEMENTS[2],
+        dateDebut: '2022-11-17',
+        dateFin: '2022-11-20',
+        prix: 99,
+        nouveauprix: 59,
+        premium: true,
+        avis: [
+          {note:7, commentaires:'Commentaire sur le forfait husky'},
       ]
       }
 ]

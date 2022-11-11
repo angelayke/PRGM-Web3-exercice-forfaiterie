@@ -18,6 +18,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     font-weight: 700;
 }
 
+.prix {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
 .line {
     text-decoration: line-through;
   }
