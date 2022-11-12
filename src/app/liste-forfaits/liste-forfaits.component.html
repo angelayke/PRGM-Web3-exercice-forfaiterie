@@ -1,8 +1,6 @@
 <p>liste-forfaits</p>
 <div  class="flex-card">
-    <app-groupe-forfaits *ngFor="let f of forfaits" [forfait]="f">
-       
-    </app-groupe-forfaits>
+    <app-groupe-forfaits *ngFor="let f of forfaits" [forfait]="f"></app-groupe-forfaits>
 </div>
-
 <app-forfait *ngFor="let f of forfaits" [forfait]="f"></app-forfait>
+<app-formulaire-forfait></app-formulaire-forfait>

@@ -1,1 +1,72 @@
 <p>formulaire-forfait works!</p>
+<mat-form-field appearance="fill">
+    <mat-label>Nom du forfait</mat-label>
+    <input matInput>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+    <mat-label>Description</mat-label>
+    <textarea matInput></textarea>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+    <mat-label>Select</mat-label>
+    <mat-select>
+      <mat-option value="one">First option</mat-option>
+      <mat-option value="two">Second option</mat-option>
+    </mat-select>
+</mat-form-field>
+
+<mat-form-field class="example-form-field" appearance="fill">
+    <mat-label>Date de début</mat-label>
+    <mat-date-range-input
+      [formGroup]="campaignOne"
+      [rangePicker]="campaignOnePicker"
+      [comparisonStart]="campaignTwo.value.start"
+      [comparisonEnd]="campaignTwo.value.end">
+      <input matStartDate placeholder="Start date" formControlName="start">
+      <input matEndDate placeholder="End date" formControlName="end">
+    </mat-date-range-input>
+    <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matSuffix [for]="campaignOnePicker"></mat-datepicker-toggle>
+    <mat-date-range-picker #campaignOnePicker></mat-date-range-picker>
+  </mat-form-field>
+  
+  <mat-form-field class="example-form-field" appearance="fill">
+    <mat-label>Date de fin</mat-label>
+    <mat-date-range-input
+      [formGroup]="campaignTwo"
+      [rangePicker]="campaignTwoPicker"
+      [comparisonStart]="campaignOne.value.start"
+      [comparisonEnd]="campaignOne.value.end">
+      <input matStartDate placeholder="Start date" formControlName="start">
+      <input matEndDate placeholder="End date" formControlName="end">
+    </mat-date-range-input>
+    <mat-datepicker-toggle matSuffix [for]="campaignTwoPicker"></mat-datepicker-toggle>
+    <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+    <mat-date-range-picker #campaignTwoPicker></mat-date-range-picker>
+  </mat-form-field>
+  
+
+  <mat-card>
+    <mat-card-content> 
+      <section class="example-section">
+        <label class="example-margin">Premium:</label>
+        <mat-radio-group [(ngModel)]="labelPosition">
+          <mat-radio-button class="example-margin" value="after">Oui</mat-radio-button>
+          <mat-radio-button class="example-margin" value="before">Non</mat-radio-button>
+        </mat-radio-group>
+      </section>
+    </mat-card-content>
+  </mat-card>
+  
+
+<mat-form-field appearance="fill">
+    <mat-label>Prix</mat-label>
+    <input matInput>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+    <mat-label>Nouveau prix</mat-label>
+    <input matInput>
+</mat-form-field>
