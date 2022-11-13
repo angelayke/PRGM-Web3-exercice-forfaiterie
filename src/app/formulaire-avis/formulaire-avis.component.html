@@ -1,5 +1,6 @@
 <p>formulaire-avis works!</p>
-
+<div>
+<label>Sur une échelle de 0 à 10 (0: très mauvais, 10: génial), quelle est votre avis sur ce forfait: </label>
 <mat-slider
   thumbLabel
   [displayWith]="formatLabel"
@@ -8,3 +9,8 @@
   min="0"
   max="10"
   aria-label="units"></mat-slider>
+</div>
+  <mat-form-field appearance="fill">
+    <mat-label>Commentaires</mat-label>
+    <textarea matInput></textarea>
+  </mat-form-field>
