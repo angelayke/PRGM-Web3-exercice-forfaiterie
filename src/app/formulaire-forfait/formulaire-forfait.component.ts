@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./formulaire-forfait.component.css']
 })
 export class FormulaireForfaitComponent implements OnInit {
+  checked = false;
+  indeterminate = false;
+  labelPosition: 'before' | 'after' = 'after';
+  disabled = false;
 
   constructor() { }
 

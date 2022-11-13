@@ -17,34 +17,20 @@
     </mat-select>
 </mat-form-field>
 
-<mat-form-field class="example-form-field" appearance="fill">
-    <mat-label>Date de début</mat-label>
-    <mat-date-range-input
-      [formGroup]="campaignOne"
-      [rangePicker]="campaignOnePicker"
-      [comparisonStart]="campaignTwo.value.start"
-      [comparisonEnd]="campaignTwo.value.end">
-      <input matStartDate placeholder="Start date" formControlName="start">
-      <input matEndDate placeholder="End date" formControlName="end">
+<mat-form-field appearance="fill" class="example-form-field">
+    <mat-label>Choisissez vos disponibilités</mat-label>
+    <mat-date-range-input [rangePicker]="rangePicker">
+      <input matStartDate placeholder="Start date">
+      <input matEndDate placeholder="End date">
     </mat-date-range-input>
     <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
-    <mat-datepicker-toggle matSuffix [for]="campaignOnePicker"></mat-datepicker-toggle>
-    <mat-date-range-picker #campaignOnePicker></mat-date-range-picker>
-  </mat-form-field>
-  
-  <mat-form-field class="example-form-field" appearance="fill">
-    <mat-label>Date de fin</mat-label>
-    <mat-date-range-input
-      [formGroup]="campaignTwo"
-      [rangePicker]="campaignTwoPicker"
-      [comparisonStart]="campaignOne.value.start"
-      [comparisonEnd]="campaignOne.value.end">
-      <input matStartDate placeholder="Start date" formControlName="start">
-      <input matEndDate placeholder="End date" formControlName="end">
-    </mat-date-range-input>
-    <mat-datepicker-toggle matSuffix [for]="campaignTwoPicker"></mat-datepicker-toggle>
-    <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
-    <mat-date-range-picker #campaignTwoPicker></mat-date-range-picker>
+    <mat-datepicker-toggle matSuffix [for]="rangePicker"></mat-datepicker-toggle>
+    <mat-date-range-picker #rangePicker>
+      <mat-date-range-picker-actions>
+        <button mat-button matDateRangePickerCancel>Cancel</button>
+        <button mat-raised-button color="primary" matDateRangePickerApply>Apply</button>
+      </mat-date-range-picker-actions>
+    </mat-date-range-picker>
   </mat-form-field>
   
 
