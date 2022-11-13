@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GroupeForfaitsComponent } from './groupe-forfaits/groupe-forfaits.component';
 import { PrixComponent } from './prix/prix.component';
 import { FormulaireForfaitComponent } from './formulaire-forfait/formulaire-forfait.component';
+import { FormulaireAvisComponent } from './formulaire-avis/formulaire-avis.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FormulaireForfaitComponent } from './formulaire-forfait/formulaire-forf
     ForfaitComponent,
     GroupeForfaitsComponent,
     PrixComponent,
-    FormulaireForfaitComponent
+    FormulaireForfaitComponent,
+    FormulaireAvisComponent
   ],
   imports: [
     BrowserModule,
