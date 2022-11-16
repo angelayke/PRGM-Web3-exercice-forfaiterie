@@ -1,16 +1,18 @@
-<p>formulaire-avis works!</p>
-<div>
-<label>Sur une échelle de 0 à 10 (0: très mauvais, 10: génial), quelle est votre avis sur ce forfait: </label>
-<mat-slider
-  thumbLabel
-  [displayWith]="formatLabel"
-  tickInterval="10"
-  step="10"
-  min="0"
-  max="10"
-  aria-label="units"></mat-slider>
-</div>
-  <mat-form-field appearance="fill">
-    <mat-label>Commentaires</mat-label>
-    <textarea matInput></textarea>
+
+<div class="form">
+  <label>Sur une échelle de 0 à 10 (0: très mauvais, 10: génial), <br> comment avez-vous trouvée cette expérience? </label>
+  <br>
+  <mat-slider
+    thumbLabel
+    [displayWith]="formatLabel"
+    tickInterval="10"
+    step="10"
+    min="0"
+    max="100"
+    aria-label="units"></mat-slider>
+  <br>
+  <mat-form-field appearance="fill" class="textarea-form">
+      <mat-label>Commentaires</mat-label>
+      <textarea matInput rows="5" cols="40" class="textarea-full-width"></textarea>
   </mat-form-field>
+</div>

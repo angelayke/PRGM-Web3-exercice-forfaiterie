@@ -1,23 +1,61 @@
-<p>formulaire-forfait works!</p>
-<mat-form-field appearance="fill">
-    <mat-label>Nom du forfait</mat-label>
-    <input matInput>
-</mat-form-field>
-
-<mat-form-field appearance="fill">
+<div class="form">
+  <mat-card>
+    <mat-card-content>
+      <section class="example-section">
+        <label class="example-margin">Premium:</label>
+        <mat-radio-group [(ngModel)]="labelPosition">
+          <mat-radio-button class="example-margin" value="after">Oui</mat-radio-button>
+          <mat-radio-button class="example-margin" value="before">Non</mat-radio-button>
+        </mat-radio-group>
+      </section>
+    </mat-card-content>
+  </mat-card>
+  <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Nom du forfait</mat-label>
+      <input matInput>
+    </mat-form-field>
+  
+  
+  <br>
+  <mat-form-field appearance="fill">
     <mat-label>Description</mat-label>
     <textarea matInput></textarea>
-</mat-form-field>
-
-<mat-form-field appearance="fill">
-    <mat-label>Select</mat-label>
-    <mat-select>
-      <mat-option value="one">First option</mat-option>
-      <mat-option value="two">Second option</mat-option>
-    </mat-select>
-</mat-form-field>
-
-<mat-form-field appearance="fill" class="example-form-field">
+  </mat-form-field>
+  <br>
+  <div>
+    <mat-label>ÉTABLISSEMENT</mat-label><br>
+      <mat-form-field appearance="fill">
+        <mat-label>Nom de l'établissement</mat-label>
+        <input matInput>
+      </mat-form-field><br>
+      <mat-form-field appearance="fill">
+        <mat-label>Adresse</mat-label>
+        <input matInput>
+      </mat-form-field> 
+      <mat-form-field appearance="fill" class="space">
+        <mat-label>Ville</mat-label>
+        <input matInput>
+      </mat-form-field><br>
+      <mat-form-field appearance="fill">
+        <mat-label>Téléphone</mat-label>
+        <input matInput type="number">
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="space">
+        <mat-label>Courriel</mat-label>
+        <input matInput type="email">
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="space">
+        <mat-label>Site Internet</mat-label>
+        <input matInput>
+      </mat-form-field><br>
+      <mat-form-field appearance="fill" class="textarea-form">
+        <mat-label>Description de l'établissement</mat-label>
+        <textarea matInput rows="5" cols="40" class="textarea-full-width"></textarea>
+      </mat-form-field>
+  </div>
+  <br>
+  <mat-form-field appearance="fill" class="example-form-field">
     <mat-label>Choisissez vos disponibilités</mat-label>
     <mat-date-range-input [rangePicker]="rangePicker">
       <input matStartDate placeholder="Start date">
@@ -32,27 +70,13 @@
       </mat-date-range-picker-actions>
     </mat-date-range-picker>
   </mat-form-field>
-  
-
-  <mat-card>
-    <mat-card-content> 
-      <section class="example-section">
-        <label class="example-margin">Premium:</label>
-        <mat-radio-group [(ngModel)]="labelPosition">
-          <mat-radio-button class="example-margin" value="after">Oui</mat-radio-button>
-          <mat-radio-button class="example-margin" value="before">Non</mat-radio-button>
-        </mat-radio-group>
-      </section>
-    </mat-card-content>
-  </mat-card>
-  
-
-<mat-form-field appearance="fill">
+  <br>
+  <mat-form-field appearance="fill">
     <mat-label>Prix</mat-label>
     <input matInput>
-</mat-form-field>
-
-<mat-form-field appearance="fill">
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="space">
     <mat-label>Nouveau prix</mat-label>
     <input matInput>
-</mat-form-field>
+  </mat-form-field>
+</div>

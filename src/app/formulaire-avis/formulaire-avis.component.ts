@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class FormulaireAvisComponent implements OnInit {
   formatLabel(value: number) {
     if (value >= 10) {
-      return Math.round(value / 10) + '/10';
+      return Math.round(value / 10);
     }
 
     return value;
