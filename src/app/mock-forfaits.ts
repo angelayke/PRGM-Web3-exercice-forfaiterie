@@ -87,5 +87,35 @@ export const FORFAITS: Forfait[] = [
         avis: [
           {note:7, commentaires:'Commentaire sur le forfait husky'},
       ]
+      },
+
+      {
+        nom: 'Forfait Route des vins',
+        description: 'Description Routes des vins, dégustations, parcours de quelques vignobles, 2 nuits dans un des vignobles ....',
+        code: 'AAA006',
+        categories:['Hébergement', 'Restauration', 'Activité intérieure'],
+        etablissement: ETABLISSEMENTS[1],
+        dateDebut: '2023-06-16',
+        dateFin: '2023-06-19',
+        prix: 699,
+        premium: true,
+        avis: [
+            {note: 8, commentaires:'Commentaire sur le forfait RDV'},
+            {note: 9, commentaires: 'Commentaire sur le forfait Rte des vins'},
+        ]
+      },
+    
+      {
+        nom: 'Forfait St-valentin',
+        description: 'Profitez d une belle soirée à deux pour déguster notre table dhôte de 5 services, Souper sur bateau mouche pour 2 personnes ....',
+        code: 'AAA007',
+        categories:[ 'Restauration'],
+        dateDebut: '2023-02-14',
+        dateFin: '2023-11-14',
+        prix: 149,
+        premium: false,
+        avis: [
+          {note:7, commentaires:'Commentaire sur le forfait St-Valentin'},
+      ]
       }
 ]
