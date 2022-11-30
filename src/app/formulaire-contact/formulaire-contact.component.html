@@ -1,4 +1,29 @@
-<p>formulaire-contact works!</p>
+<h2>Formulaire de contact</h2>
 <div class="form">
-    
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <label for="prenom">Prénom: </label>
+    <input id="prenom" type="text" formControlName="prenom" required>
+
+    <label for="nom">Nom: </label>
+    <input id="nom" type="text" formControlName="nom" required>
+    <br>
+    <label for="email">Courriel: </label>
+    <input id="email" type="email" formControlName="email" required>
+    <br>
+    <label for="tel">Téléphone: </label>
+    <input id="tel" type="tel" formControlName="tel">
+    <br>
+    <label for="email">Courriel: </label>
+    <input id="email" type="email" formControlName="email">
+    <br>
+    <label for="preference">Préférence de communication: </label>
+    <input id="preference" type="radio" value="Courriel" formControlName="preference">
+    <span>Courriel</span>
+    <input id="preference" type="radio" value="Téléphone" formControlName="preference">
+    <span>Téléphone</span>
+
+    <br>
+    <p><em>Complete the form to enable button.</em></p>
+    <button type="submit" [disabled]="!contactForm.valid">Soumettre</button>
+  </form>
 </div>
