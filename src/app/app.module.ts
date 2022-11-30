@@ -21,6 +21,7 @@ import { GroupeForfaitsComponent } from './groupe-forfaits/groupe-forfaits.compo
 import { PrixComponent } from './prix/prix.component';
 import { FormulaireForfaitComponent } from './formulaire-forfait/formulaire-forfait.component';
 import { FormulaireAvisComponent } from './formulaire-avis/formulaire-avis.component';
+import { FormulaireContactComponent } from './formulaire-contact/formulaire-contact.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FormulaireAvisComponent } from './formulaire-avis/formulaire-avis.compo
     GroupeForfaitsComponent,
     PrixComponent,
     FormulaireForfaitComponent,
-    FormulaireAvisComponent
+    FormulaireAvisComponent,
+    FormulaireContactComponent
   ],
   imports: [
     BrowserModule,
