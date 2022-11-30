@@ -10,6 +10,7 @@ import { MatRadioModule} from '@angular/material/radio';
 import { MatSliderModule} from '@angular/material/slider';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,6 +23,7 @@ import { PrixComponent } from './prix/prix.component';
 import { FormulaireForfaitComponent } from './formulaire-forfait/formulaire-forfait.component';
 import { FormulaireAvisComponent } from './formulaire-avis/formulaire-avis.component';
 import { FormulaireContactComponent } from './formulaire-contact/formulaire-contact.component';
+import { FormulaireRechercheComponent } from './formulaire-recherche/formulaire-recherche.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { FormulaireContactComponent } from './formulaire-contact/formulaire-cont
     PrixComponent,
     FormulaireForfaitComponent,
     FormulaireAvisComponent,
-    FormulaireContactComponent
+    FormulaireContactComponent,
+    FormulaireRechercheComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,8 @@ import { FormulaireContactComponent } from './formulaire-contact/formulaire-cont
     MatRadioModule,
     MatSliderModule,
     MatNativeDateModule,
-    MatInputModule
+    MatInputModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

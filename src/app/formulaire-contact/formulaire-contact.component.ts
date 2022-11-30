@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-formulaire-contact',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./formulaire-contact.component.css']
 })
 export class FormulaireContactComponent implements OnInit {
-
+  name = new FormControl('');
+  
   constructor() { }
 
   ngOnInit(): void {
