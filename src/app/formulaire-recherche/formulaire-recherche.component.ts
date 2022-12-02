@@ -17,17 +17,14 @@ export class FormulaireRechercheComponent implements OnInit {
   }
 
   //etablissement
- @Input() etablissement: object = {
-    option1: 'Hotel Whynot',
-    option2: 'Hotel de Glace',
-    option3: 'Pourvoirie du Lac'
- };
+ @Input() etablissement: string = '';
  @Output() etablissementChange = new EventEmitter();
   changeEts() { 
     this.etablissementChange.emit(this.etablissement); 
   }
 
   isChecked = true;
+  
  
   constructor() { }
 

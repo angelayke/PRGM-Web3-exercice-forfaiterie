@@ -11,7 +11,7 @@ export class ListeForfaitsComponent implements OnInit {
   forfaits = FORFAITS;
   showFiller = false;
   categorie = '';
-  etablissement = ETABLISSEMENTS;
+  etablissement = '';
     
   constructor() { }
 
