@@ -9,6 +9,7 @@ import { FORFAITS } from '../mock-forfaits';
 })
 export class ListeForfaitsComponent implements OnInit {
   forfaits = FORFAITS;
+  showFiller = false;
     
   constructor() { }
 

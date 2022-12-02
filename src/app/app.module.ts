@@ -11,6 +11,7 @@ import { MatSliderModule} from '@angular/material/slider';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -51,7 +52,8 @@ import { FormulaireRechercheComponent } from './formulaire-recherche/formulaire-
     MatSliderModule,
     MatNativeDateModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
