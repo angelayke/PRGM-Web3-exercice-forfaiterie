@@ -58,3 +58,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     border: 1px solid grey;
     border-radius: 0.5rem;
 }
+
+.example-form mat-slide-toggle {
+    margin: 8px 0;
+    display: block;
+  }

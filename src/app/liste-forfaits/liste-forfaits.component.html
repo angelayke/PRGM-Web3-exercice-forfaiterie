@@ -4,11 +4,12 @@
 <div>
   <mat-drawer-container class="example-container" autosize>
     <mat-drawer #drawer class="example-sidenav" mode="side">
-      <p>Ici doit se trouver le formulaire de recherche</p>
-      <p *ngIf="showFiller">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <h3>Quel type de forfait recherchez-vous?</h3>
+      <app-formulaire-recherche [(categorie)]="categorie"></app-formulaire-recherche>
+      <!--<p *ngIf="showFiller">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       <button (click)="showFiller = !showFiller" mat-raised-button>
         Toggle extra text
-      </button>
+      </button>-->
     </mat-drawer>
 
     <div class="example-sidenav-content">
@@ -17,7 +18,9 @@
       </button>
     </div>
 
-  
+  <div>
+    Choix de type de forfait: {{categorie}} {{etablissement}}
+  </div>
   <app-formulaire-contact></app-formulaire-contact>
   <app-forfait *ngFor="let f of forfaits" [forfait]="f"></app-forfait>
   <app-formulaire-forfait></app-formulaire-forfait>

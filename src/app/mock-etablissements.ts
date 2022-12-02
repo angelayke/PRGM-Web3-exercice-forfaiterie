@@ -11,12 +11,12 @@ export const ETABLISSEMENTS: Etablissement[] = [
       },
 
       {
-        nomEtablissement: 'Hotel WhyNot',
-        adresse: '10 rue des Impasses',
-        ville: 'Perdue',
-        telephone: 5144567896,
-        courriel: 'info@hotelwhynot.com',
-        description: 'hotel bord du marais avec dégustation'
+        nomEtablissement: 'Hotel de Glace',
+        adresse: '3 rue des Igloo',
+        ville: 'Pole Nord',
+        telephone: 5144157855,
+        courriel: 'info@hoteldeglace.com',
+        description: 'hotel en glace'
       },
 
       {

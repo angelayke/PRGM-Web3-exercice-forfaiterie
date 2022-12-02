@@ -1,1 +1,13 @@
-<p>formulaire-recherche works!</p>
+<p>Entrez la catégorie souhaitée:</p>
+<input [(ngModel)]="categorie" type="text" id="categorie" name="categorie" (ngModelChange)="change()">
+<p></p>
+<mat-form-field appearance="fill">
+  <mat-label>Choisissez un établissement</mat-label>
+  <mat-select [(ngModel)]="etablissement" id="etablissement" name="etablissement" type="value" (ngModelChange)="changeEts()">
+    <mat-option value="option1">Hotel Whynot</mat-option>
+    <mat-option value="option2">Hotel de Glace</mat-option>
+    <mat-option value="option3">Pourvoirie du Lac</mat-option>
+  </mat-select>
+</mat-form-field>
+<p></p>
+<mat-slide-toggle [(ngModel)]="isChecked">Premium {{isChecked}}</mat-slide-toggle>

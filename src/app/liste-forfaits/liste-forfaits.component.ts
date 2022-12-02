@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Forfait } from '../forfait';
 import { FORFAITS } from '../mock-forfaits';
+import { ETABLISSEMENTS } from '../mock-etablissements';
 
 @Component({
   selector: 'app-liste-forfaits',
@@ -10,6 +10,8 @@ import { FORFAITS } from '../mock-forfaits';
 export class ListeForfaitsComponent implements OnInit {
   forfaits = FORFAITS;
   showFiller = false;
+  categorie = '';
+  etablissement = ETABLISSEMENTS;
     
   constructor() { }
 
