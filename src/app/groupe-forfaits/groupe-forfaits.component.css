@@ -1,9 +1,9 @@
-:host{
-    display: block;
-    border: 1px solid rgb(127, 195, 207);
-    background-color: rgb(207, 240, 241);
-    border-radius: 0.5rem;
+:host{  
     width: 90%;
-    padding: 1rem;
+    padding: 0.5rem;
     margin: 20px 0;
+}
+
+.mat-card {
+    background-color: rgb(224, 246, 247);
 }
