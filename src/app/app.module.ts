@@ -27,6 +27,7 @@ import { FormulaireAvisComponent } from './formulaire-avis/formulaire-avis.compo
 import { FormulaireContactComponent } from './formulaire-contact/formulaire-contact.component';
 import { FormulaireRechercheComponent } from './formulaire-recherche/formulaire-recherche.component';
 import { PremiumPipe } from './premium.pipe';
+import { EtablissementPipe } from './etablissement.pipe';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { PremiumPipe } from './premium.pipe';
     FormulaireAvisComponent,
     FormulaireContactComponent,
     FormulaireRechercheComponent,
-    PremiumPipe
+    PremiumPipe,
+    EtablissementPipe
   ],
   imports: [
     BrowserModule,

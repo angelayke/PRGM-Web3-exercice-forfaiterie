@@ -1,5 +1,5 @@
 import { KeyValue } from '@angular/common';
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, Pipe } from '@angular/core';
 import { FORFAITS } from '../mock-forfaits';
 
 @Component({
@@ -24,8 +24,7 @@ export class FormulaireRechercheComponent implements OnInit {
   }
 
   isChecked = true;
-  
- 
+
   constructor() { }
 
   ngOnInit(): void {
