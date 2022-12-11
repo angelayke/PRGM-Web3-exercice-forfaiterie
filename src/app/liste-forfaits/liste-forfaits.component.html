@@ -1,5 +1,5 @@
 <div class="flex-card">
-  <app-groupe-forfaits *ngFor="let f of forfaits" [forfait]="f"></app-groupe-forfaits>
+  <app-groupe-forfaits *ngFor="let f of forfaits | premium" [forfait]="f"></app-groupe-forfaits>
 </div>
 <div>
   <mat-drawer-container class="example-container" autosize>
