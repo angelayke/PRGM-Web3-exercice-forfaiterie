@@ -13,7 +13,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -32,6 +33,7 @@ import { EtablissementPipe } from './etablissement.pipe';
 import { ListeEtsPourvoiriedulacComponent } from './liste-ets-pourvoiriedulac/liste-ets-pourvoiriedulac.component';
 import { ListeEtsHotelwhynotComponent } from './liste-ets-hotelwhynot/liste-ets-hotelwhynot.component';
 import { ListeEtsHoteldeglaceComponent } from './liste-ets-hoteldeglace/liste-ets-hoteldeglace.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,8 @@ import { ListeEtsHoteldeglaceComponent } from './liste-ets-hoteldeglace/liste-et
     EtablissementPipe,
     ListeEtsPourvoiriedulacComponent,
     ListeEtsHotelwhynotComponent,
-    ListeEtsHoteldeglaceComponent
+    ListeEtsHoteldeglaceComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +69,8 @@ import { ListeEtsHoteldeglaceComponent } from './liste-ets-hoteldeglace/liste-et
     MatInputModule,
     ReactiveFormsModule,
     MatSidenavModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatMenuModule
   ],
   providers: [ {provide:LOCALE_ID, useValue:'fr-CA'}],
   bootstrap: [AppComponent]
