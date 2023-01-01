@@ -1,1 +1,3 @@
-<p>liste-ets-pourvoiriedulac works!</p>
+<div class="flex-card">
+    <app-forfait *ngFor="let f of forfaits | etablissement: 'Pourvoirie du Lac'" [forfait]="f"></app-forfait>
+</div>

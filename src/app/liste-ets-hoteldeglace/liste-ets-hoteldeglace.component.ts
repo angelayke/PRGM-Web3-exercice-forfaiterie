@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FORFAITS } from '../mock-forfaits';
 
 @Component({
   selector: 'app-liste-ets-hoteldeglace',
@@ -6,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./liste-ets-hoteldeglace.component.css']
 })
 export class ListeEtsHoteldeglaceComponent implements OnInit {
+  forfaits = FORFAITS;
+  showFiller = false;
+  categorie = '';
+  etablissement = '';
 
   constructor() { }
 

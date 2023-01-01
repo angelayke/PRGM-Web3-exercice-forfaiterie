@@ -1,1 +1,3 @@
-<p>liste-ets-hoteldeglace works!</p>
+<div class="flex-card">
+    <app-forfait *ngFor="let f of forfaits | etablissement: 'Hotel de Glace'" [forfait]="f"></app-forfait>
+</div>
