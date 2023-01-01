@@ -1,6 +1,20 @@
 import { Forfait } from "./forfait";
 import { ETABLISSEMENTS } from "./mock-etablissements";
 
+// LES CATEGORIES forfaiterie
+// Hébergement, Détente, Restauration, Activités.
+
+// GO FORFAITS 
+// Nouveautés, Restaurants & terroir, Microbrasseries, Sports & aventure, Arts & spectacles, Détente & spas, 
+// Découvertes & initiations, Séjours & escapades, Romantique
+
+// TUANGO
+// Hôtels, Activités, Détente, Restaurant et Alimentation
+
+// SHIPICO.CA
+// Activités / Divertissement (13), Automobile / Mécanique (5), Divers (3), Hôtel / Hébergement (1), 
+// Maison (6), Mode (2), Nouveautés / Offres populaires (2), Restaurant / Nourriture (30), Santé / Sport / Fitness (7), Spa / Beauté (7)
+
 export const FORFAITS: Forfait[] = [
       {
         nom: 'Forfait Trucmuche',
@@ -43,7 +57,7 @@ export const FORFAITS: Forfait[] = [
         nom: 'Forfait Activité',
         description: 'Description Activité ....',
         code: 'AAA003',
-        categories:['Restauration', 'Détente', 'Activités extérieures'],
+        categories:['Restauration', 'Détente', 'Activités'],
         etablissement: ETABLISSEMENTS[2],
         dateDebut: '2022-11-14',
         dateFin: '2022-11-21',
@@ -61,7 +75,7 @@ export const FORFAITS: Forfait[] = [
         nom: 'Forfait Noël',
         description: 'Description Noel ....',
         code: 'AAA005',
-        categories:['Hébergement', 'Restauration', 'Activité intérieure'],
+        categories:['Hébergement', 'Restauration', 'Activité'],
         etablissement: ETABLISSEMENTS[1],
         dateDebut: '2022-12-24',
         dateFin: '2022-12-26',
@@ -77,7 +91,7 @@ export const FORFAITS: Forfait[] = [
         nom: 'Forfait Husky',
         description: 'Chien de traineau ....',
         code: 'AAA005',
-        categories:[ 'Nature', 'Activités extérieures'],
+        categories:['Activités'],
         etablissement: ETABLISSEMENTS[2],
         dateDebut: '2022-11-17',
         dateFin: '2022-11-20',
