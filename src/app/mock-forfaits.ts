@@ -94,7 +94,7 @@ export const FORFAITS: Forfait[] = [
         description: 'Description Routes des vins, dégustations, parcours de quelques vignobles, 2 nuits dans un des vignobles ....',
         code: 'AAA006',
         categories:['Hébergement', 'Restauration', 'Activité intérieure'],
-        etablissement: ETABLISSEMENTS[1],
+        etablissement: ETABLISSEMENTS[0],
         dateDebut: '2023-06-16',
         dateFin: '2023-06-19',
         prix: 699,

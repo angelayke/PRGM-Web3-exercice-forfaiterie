@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
@@ -28,6 +29,9 @@ import { FormulaireContactComponent } from './formulaire-contact/formulaire-cont
 import { FormulaireRechercheComponent } from './formulaire-recherche/formulaire-recherche.component';
 import { PremiumPipe } from './premium.pipe';
 import { EtablissementPipe } from './etablissement.pipe';
+import { ListeEtsPourvoiriedulacComponent } from './liste-ets-pourvoiriedulac/liste-ets-pourvoiriedulac.component';
+import { ListeEtsHotelwhynotComponent } from './liste-ets-hotelwhynot/liste-ets-hotelwhynot.component';
+import { ListeEtsHoteldeglaceComponent } from './liste-ets-hoteldeglace/liste-ets-hoteldeglace.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +45,10 @@ import { EtablissementPipe } from './etablissement.pipe';
     FormulaireContactComponent,
     FormulaireRechercheComponent,
     PremiumPipe,
-    EtablissementPipe
+    EtablissementPipe,
+    ListeEtsPourvoiriedulacComponent,
+    ListeEtsHotelwhynotComponent,
+    ListeEtsHoteldeglaceComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +68,7 @@ import { EtablissementPipe } from './etablissement.pipe';
     MatSidenavModule,
     MatSlideToggleModule
   ],
-  providers: [],
+  providers: [ {provide:LOCALE_ID, useValue:'fr-CA'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

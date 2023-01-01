@@ -1,5 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Etablissement } from './etablissement';
+import { Forfait } from './forfait';
+
 
 
 @Pipe({
@@ -7,8 +8,7 @@ import { Etablissement } from './etablissement';
 })
 export class EtablissementPipe implements PipeTransform {
 
-  transform(etablissements: Etablissement[]): Etablissement {
-    return etablissement.filter(etablissement => etablissement.nomEtablissement == 'Hotel Whynot');
+  transform(forfaits: Forfait[], etablissement: string): Forfait[] {
+    return forfaits.filter(forfait => forfait.etablissement?.nomEtablissement == etablissement);
   }
-
 }
