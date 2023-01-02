@@ -1,31 +1,17 @@
-<!-- 1er essai
-<div>
-    <button mat-button>Accueil</button>
-
-    <button mat-button [matMenuTriggerFor]="belowMenu">Forfaits</button>
-    <mat-menu #belowMenu="matMenu" yPosition="below">
-    <button mat-menu-item>Item 1</button>
-    <button mat-menu-item>Item 2</button>
-    </mat-menu>
-
-    <button mat-button [matMenuTriggerFor]="beforeMenu">Catégories</button>
-    <mat-menu #beforeMenu="matMenu" xPosition="before">
-    <button mat-menu-item>Hébergement</button>
-    <button mat-menu-item>Restauration</button>
-    <button mat-menu-item>Activités</button>
-    <button mat-menu-item>Détente</button>
-    
-    </mat-menu>
-
-    <button mat-button>Contact</button>
-</div>-->
 
     <mat-toolbar color="secondary">
         <mat-toolbar-row>
           <span>CaptainForfait</span><!-- idees de noms : PrimusForfait - DreamForfait -->
           <span class="example-spacer"></span>
 
-          <button mat-button>Forfaits</button>
+          <button mat-button routerLink="/forfaits">Forfaits</button>
+
+          <button mat-button [matMenuTriggerFor]="beforeMenu">Hôtels</button>
+          <mat-menu #beforeMenu="matMenu" xPosition="before">
+          <button mat-menu-item routerLink="/hotelwhynot">Hôtel WhyNot</button>
+          <button mat-menu-item routerLink="/pourvoirielac">Pourvoirie du lac</button>
+          <button mat-menu-item routerLink="/hotelglace">Hôtel de Glace</button>
+          </mat-menu>
       
           <button mat-button [matMenuTriggerFor]="beforeMenu">Catégories</button>
           <mat-menu #beforeMenu="matMenu" xPosition="before">
@@ -33,84 +19,30 @@
           <button mat-menu-item>Restauration</button>
           <button mat-menu-item>Activités</button>
           <button mat-menu-item>Détente</button>
-          
           </mat-menu>
       
-          <button mat-button>Contact</button>
+          <button mat-button routerLink="/contact">Contact</button>
 
           <span class="example-spacer"></span>
-          <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+          <button mat-icon-button [matMenuTriggerFor]="menu" class="example-icon" aria-label="Example icon-button with menu icon">
             <mat-icon>menu</mat-icon>
           </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>Forfaits</button>
+            <button mat-menu-item [matMenuTriggerFor]="hotel">Hôtels</button>
+                <mat-menu #hotel="matMenu">
+                    <button mat-menu-item routerLink="/hotelwhynot">Hôtel WhyNot</button>
+                    <button mat-menu-item routerLink="/pourvoirielac">Pourvoirie du lac</button>
+                    <button mat-menu-item routerLink="/hotelglace">Hôtel de Glace</button>
+                </mat-menu>
+            <button mat-menu-item [matMenuTriggerFor]="categories">Catégories</button>
+                <mat-menu #categories="matMenu">
+                    <button mat-menu-item>Hébergement</button>
+                    <button mat-menu-item>Restauration</button>
+                    <button mat-menu-item>Activités</button>
+                    <button mat-menu-item>Détente</button>
+                </mat-menu>
+            <button mat-menu-item>Contact</button>
+          </mat-menu>
         </mat-toolbar-row>
 
-<!-- 2e essai avec le tuto
-<div>
-    <mat-sidenav-container>
-        <mat-sidenav  #sidenav role="navigation">
-         <mat-nav-list>
-          <a mat-list-item>
-            <mat-icon class="icon">input</mat-icon>
-            <span class="label">Login</span>
-          </a>
-          <a mat-list-item>
-            <mat-icon class="icon">home</mat-icon>
-              <span class="label">Home</span>
-          </a>
-          <a mat-list-item>
-            <mat-icon class="icon">dashboard</mat-icon>
-            <span class="label">Dashboard</span>
-          </a>
-          <a  mat-list-item type="button">
-            <mat-icon class="icon">input</mat-icon>
-            <span class="label">LogOut</span>
-          </a>
-          </mat-nav-list>
-        </mat-sidenav>
-        <mat-sidenav-content>
-          <mat-toolbar color="primary">
-           <div fxHide.gt-xs>
-             <button mat-icon-button>
-              <mat-icon>menu</mat-icon>
-            </button>
-          </div>
-           <div>
-             <a>
-                Material Blog
-             </a>
-           </div>
-           <div fxFlex fxLayout fxLayoutAlign="flex-end"  fxHide.xs>
-              <ul fxLayout fxLayoutGap="20px" class="navigation-items">
-                  <li>
-                      <a>
-                        <mat-icon class="icon">input</mat-icon>
-                        <span  class="label">Login</span>
-                       </a>
-                  </li>
-                  <li>
-                    <a >
-                        <mat-icon class="icon">home</mat-icon>
-                        <span class="label">Home</span>
-                    </a>
-                  </li>
-                  <li>
-                      <a>
-                          <mat-icon class="icon">dashboard</mat-icon>
-                          <span class="label">Dashboard</span>
-                      </a>
-                    </li>
-                  <li>
-                      <a>
-                        <mat-icon class="icon">input</mat-icon>
-                        <span class="label">LogOut</span>
-                       </a>
-                  </li>
-              </ul>
-           </div>
-          </mat-toolbar>
-          <main>
-          </main>
-        </mat-sidenav-content>
-      </mat-sidenav-container>
-</div>
--->
