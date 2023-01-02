@@ -14,7 +14,14 @@ import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatMenuModule } from '@angular/material/menu';
+
+import {MatIconModule} from '@angular/material/icon';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatListModule} from '@angular/material/list';
+import {MatButtonModule} from '@angular/material/button';
+
+// provenance du tuto du menu
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -70,7 +77,11 @@ import { MenuComponent } from './menu/menu.component';
     ReactiveFormsModule,
     MatSidenavModule,
     MatSlideToggleModule,
-    MatMenuModule
+    MatMenuModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatListModule,
+    MatButtonModule
   ],
   providers: [ {provide:LOCALE_ID, useValue:'fr-CA'}],
   bootstrap: [AppComponent]
