@@ -21,7 +21,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import {MatButtonModule} from '@angular/material/button';
 
-// provenance du tuto du menu
+import {MatTableModule} from '@angular/material/table';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -41,6 +41,7 @@ import { ListeEtsPourvoiriedulacComponent } from './liste-ets-pourvoiriedulac/li
 import { ListeEtsHotelwhynotComponent } from './liste-ets-hotelwhynot/liste-ets-hotelwhynot.component';
 import { ListeEtsHoteldeglaceComponent } from './liste-ets-hoteldeglace/liste-ets-hoteldeglace.component';
 import { MenuComponent } from './menu/menu.component';
+import { TableauForfaitsComponent } from './tableau-forfaits/tableau-forfaits.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { MenuComponent } from './menu/menu.component';
     ListeEtsPourvoiriedulacComponent,
     ListeEtsHotelwhynotComponent,
     ListeEtsHoteldeglaceComponent,
-    MenuComponent
+    MenuComponent,
+    TableauForfaitsComponent
   ],
   imports: [
     BrowserModule,
@@ -81,7 +83,8 @@ import { MenuComponent } from './menu/menu.component';
     MatIconModule,
     MatToolbarModule,
     MatListModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTableModule
   ],
   providers: [ {provide:LOCALE_ID, useValue:'fr-CA'}],
   bootstrap: [AppComponent]
