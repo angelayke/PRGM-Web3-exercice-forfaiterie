@@ -5,10 +5,11 @@ import { FormulaireContactComponent } from './formulaire-contact/formulaire-cont
 import { ListeEtsHotelwhynotComponent } from './liste-ets-hotelwhynot/liste-ets-hotelwhynot.component';
 import { ListeEtsPourvoiriedulacComponent } from './liste-ets-pourvoiriedulac/liste-ets-pourvoiriedulac.component';
 import { ListeEtsHoteldeglaceComponent } from './liste-ets-hoteldeglace/liste-ets-hoteldeglace.component';
+import { TableauForfaitsComponent } from './tableau-forfaits/tableau-forfaits.component';
 
 const routes: Routes = [
- // { path: '', component: ListeProduitsComponent },
-  { path: 'forfaits', component: ListeForfaitsComponent },
+  { path: '', component: ListeForfaitsComponent },
+  { path: 'forfaits', component: TableauForfaitsComponent },
   //{ path: 'categories', component: ListeForfaitsComponent },
   { path: 'hotelwhynot', component: ListeEtsHotelwhynotComponent },
   { path: 'pourvoirielac', component: ListeEtsPourvoiriedulacComponent },

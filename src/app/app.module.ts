@@ -43,6 +43,7 @@ import { ListeEtsHotelwhynotComponent } from './liste-ets-hotelwhynot/liste-ets-
 import { ListeEtsHoteldeglaceComponent } from './liste-ets-hoteldeglace/liste-ets-hoteldeglace.component';
 import { MenuComponent } from './menu/menu.component';
 import { TableauForfaitsComponent } from './tableau-forfaits/tableau-forfaits.component';
+import { GestionForfaitsComponent } from './gestion-forfaits/gestion-forfaits.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { TableauForfaitsComponent } from './tableau-forfaits/tableau-forfaits.co
     ListeEtsHotelwhynotComponent,
     ListeEtsHoteldeglaceComponent,
     MenuComponent,
-    TableauForfaitsComponent
+    TableauForfaitsComponent,
+    GestionForfaitsComponent
   ],
   imports: [
     BrowserModule,

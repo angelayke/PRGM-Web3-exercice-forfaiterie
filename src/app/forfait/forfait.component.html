@@ -1,6 +1,6 @@
 <div>
     <h4>{{forfait?.categories}}</h4>
-    <div *ngFor="let f of forfait?.avis">{{f.note}} {{f.commentaires}}</div>
+    
     <div>
         <h1>{{forfait?.nom}}</h1>
         <p><em>Code: {{forfait?.code}}</em></p>
@@ -9,9 +9,11 @@
     <app-prix [prix]="forfait?.prix || 0" [nouveauprix]="forfait?.nouveauprix"></app-prix>
     <!-- <p>Montant économisé: {{forfait?.prix-forfait?.nouveauprix}} $</p>-->
    
-    <p><strong>Description:</strong> {{forfait?.description}}</p>
+    <p><strong>Description:</strong> <br> {{forfait?.description}}</p>
     <p>Lieu: {{forfait?.etablissement?.nomEtablissement}}</p>
     <p>Date de début: {{forfait?.dateDebut}}</p>
     <p>Date de fin: {{forfait?.dateFin}}</p>
-    <div></div>
+    <div>
+        <div *ngFor="let f of forfait?.avis">{{f.note}} {{f.commentaires}}</div>
+    </div>
 </div>
