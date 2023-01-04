@@ -1,1 +1,75 @@
-<p>tableau-forfaits works!</p>
+<!--Table with pagination-->
+<div class="container-fluid">
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource">
+
+
+      <!-- code  -->
+      <ng-container matColumnDef="code">
+        <th mat-header-cell *matHeaderCellDef> Code </th>
+        <td mat-cell *matCellDef="let element"> {{element.code}} </td>
+      </ng-container>
+
+      <!-- nom  -->
+      <ng-container matColumnDef="nom">
+        <th mat-header-cell *matHeaderCellDef> Nom </th>
+        <td mat-cell *matCellDef="let element"> {{element.nom}} </td>
+      </ng-container>
+
+      <!-- description  
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef> Description </th>
+        <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+      </ng-container>-->
+
+      <!-- categories  -->
+      <ng-container matColumnDef="categories">
+        <th mat-header-cell *matHeaderCellDef> Catégories </th>
+        <td mat-cell *matCellDef="let element"> {{element.categories}} </td>
+      </ng-container>
+
+      <!-- etablissement  -->
+      <ng-container matColumnDef="etablissement">
+        <th mat-header-cell *matHeaderCellDef> Établissement </th>
+        <td mat-cell *matCellDef="let element"> {{element.etablissement.nomEtablissement}} </td>
+      </ng-container>
+
+      <!-- date debut  -->
+      <ng-container matColumnDef="dateDebut">
+        <th mat-header-cell *matHeaderCellDef> Date de début </th>
+        <td mat-cell *matCellDef="let element"> {{element.dateDebut}} </td>
+      </ng-container>
+
+      <!-- date fin  -->
+      <ng-container matColumnDef="dateFin">
+        <th mat-header-cell *matHeaderCellDef> Date de fin </th>
+        <td mat-cell *matCellDef="let element"> {{element.dateFin}} </td>
+      </ng-container>
+
+      <!-- prix  -->
+      <ng-container matColumnDef="prix">
+        <th mat-header-cell *matHeaderCellDef> Prix </th>
+        <td mat-cell *matCellDef="let element"> {{element.prix}} </td>
+      </ng-container>
+
+      <!-- nouveau prix  -->
+      <ng-container matColumnDef="nouveauprix">
+        <th mat-header-cell *matHeaderCellDef> Nouveau Prix </th>
+        <td mat-cell *matCellDef="let element"> {{element.nouveauprix}} </td>
+      </ng-container>
+
+      <!-- premium Column -->
+      <ng-container matColumnDef="premium">
+        <th mat-header-cell *matHeaderCellDef> Premium </th>
+        <td mat-cell *matCellDef="let element"> {{element.premium}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of periodic elements">
+    </mat-paginator>
+  </div>
+
+</div>

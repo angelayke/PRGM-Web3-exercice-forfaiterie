@@ -13,6 +13,6 @@ export interface Forfait {
     nouveauprix?: number;
     avis: Avis[];
     premium?: boolean;
-    color?: string;
+    //color?: string;
     //economie?: number;
 }
