@@ -6,10 +6,11 @@ import { ListeEtsHotelwhynotComponent } from './liste-ets-hotelwhynot/liste-ets-
 import { ListeEtsPourvoiriedulacComponent } from './liste-ets-pourvoiriedulac/liste-ets-pourvoiriedulac.component';
 import { ListeEtsHoteldeglaceComponent } from './liste-ets-hoteldeglace/liste-ets-hoteldeglace.component';
 import { TableauForfaitsComponent } from './tableau-forfaits/tableau-forfaits.component';
+import { GestionForfaitsComponent } from './gestion-forfaits/gestion-forfaits.component';
 
 const routes: Routes = [
   { path: '', component: ListeForfaitsComponent },
-  { path: 'forfaits', component: TableauForfaitsComponent },
+  { path: 'forfaits', component: GestionForfaitsComponent },
   //{ path: 'categories', component: ListeForfaitsComponent },
   { path: 'hotelwhynot', component: ListeEtsHotelwhynotComponent },
   { path: 'pourvoirielac', component: ListeEtsPourvoiriedulacComponent },

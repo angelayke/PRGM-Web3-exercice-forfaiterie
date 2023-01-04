@@ -1,6 +1,5 @@
 :host{
     display: block;
-    background-color: bisque;
     padding: 1rem;
 }
 
@@ -9,4 +8,8 @@
     padding: 1rem;
     border: 1px solid grey;
     border-radius: 0.5rem;
+}
+
+fa-icon {
+    color:#ff4081;
 }

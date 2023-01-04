@@ -23,6 +23,8 @@ import {MatButtonModule} from '@angular/material/button';
 
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -88,7 +90,8 @@ import { GestionForfaitsComponent } from './gestion-forfaits/gestion-forfaits.co
     MatListModule,
     MatButtonModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    FontAwesomeModule
   ],
   providers: [ {provide:LOCALE_ID, useValue:'fr-CA'}],
   bootstrap: [AppComponent]

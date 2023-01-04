@@ -1,7 +1,8 @@
 
 <div class="form">
-  <label>Sur une échelle de 0 à 10 (0: très mauvais, 10: génial), <br> comment avez-vous trouvée cette expérience? </label>
+  <label><strong>Sur une échelle de 0 à 10 (0: très mauvais, 10: génial), comment avez-vous trouvée cette expérience?</strong>  <br><em>Glissez le bouton pour obtenir la note souhaitée</em></label>
   <br>
+  <fa-icon [icon]="faPoop"></fa-icon>
   <mat-slider
     thumbLabel
     [displayWith]="formatLabel"
@@ -10,9 +11,11 @@
     min="0"
     max="100"
     aria-label="units"></mat-slider>
+
+    <fa-icon [icon]="faFaceSmile"></fa-icon>
   <br>
   <mat-form-field appearance="fill" class="textarea-form">
       <mat-label>Commentaires</mat-label>
-      <textarea matInput rows="5" cols="40" class="textarea-full-width"></textarea>
+      <textarea matInput rows="3" class="textarea-full-width"></textarea>
   </mat-form-field>
 </div>

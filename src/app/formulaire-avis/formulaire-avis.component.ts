@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { faFaceSmile } from '@fortawesome/free-solid-svg-icons';
+import { faPoop } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-formulaire-avis',
@@ -13,6 +16,9 @@ export class FormulaireAvisComponent implements OnInit {
 
     return value;
   }
+
+  faFaceSmile = faFaceSmile;
+  faPoop = faPoop;
 
   constructor() { }
 
