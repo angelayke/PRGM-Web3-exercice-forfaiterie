@@ -125,7 +125,7 @@ export const FORFAITS: Forfait[] = [
         code: 'AAA007',
         categories:[ 'Restauration, Activités'],
         dateDebut: '2023-02-14',
-        dateFin: '2023-11-14',
+        dateFin: '2023-02-15',
         prix: 149,
         premium: false,
         avis: [

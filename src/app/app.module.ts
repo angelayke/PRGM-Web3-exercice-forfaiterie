@@ -25,7 +25,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -46,6 +46,7 @@ import { ListeEtsHoteldeglaceComponent } from './liste-ets-hoteldeglace/liste-et
 import { MenuComponent } from './menu/menu.component';
 import { TableauForfaitsComponent } from './tableau-forfaits/tableau-forfaits.component';
 import { GestionForfaitsComponent } from './gestion-forfaits/gestion-forfaits.component';
+import { ForfaitService } from './forfait.service';
 
 @NgModule({
   declarations: [
@@ -91,9 +92,13 @@ import { GestionForfaitsComponent } from './gestion-forfaits/gestion-forfaits.co
     MatButtonModule,
     MatTableModule,
     MatPaginatorModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
-  providers: [ {provide:LOCALE_ID, useValue:'fr-CA'}],
+  providers: [ 
+    {provide:LOCALE_ID, useValue:'fr-CA'}, 
+    ForfaitService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

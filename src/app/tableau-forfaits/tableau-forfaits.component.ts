@@ -24,8 +24,8 @@ export class TableauForfaitsComponent implements AfterViewInit {
     this.dataSource.paginator = this.paginator;
   }
 
-  //ngOnInit(): void {
- // }
+  ngOnInit(): void {
+  }
 
 }
 
