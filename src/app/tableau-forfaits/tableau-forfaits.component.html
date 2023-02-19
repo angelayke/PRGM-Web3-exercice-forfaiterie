@@ -1,7 +1,37 @@
+<div class="flex-container">
+  <form #forfaitFormAjout="ngForm">
+    <mat-form-field>
+      <mat-label>Forfait</mat-label>
+      <input matInput placeholder="Ex. Forfait" required minlength="2" maxlength="50" name="nom" 
+      [(ngModel)]="newForfait.nom" #nom="ngModel" (keyup.enter)="addForfait(forfaitFormAjout);">
+    </mat-form-field>
+    <button mat-fab color="primary" aria-label="Ajouter" [disabled]="!forfaitFormAjout.form.valid"
+    (click)="addForfait(forfaitFormAjout);">
+      <mat-icon>add</mat-icon>
+    </button>
+    <mat-error *ngIf="nom.invalid && (nom.dirty || nom.touched) && nom.hasError('required')">
+      Le nom est obligatoire.
+    </mat-error>
+    <mat-error *ngIf="nom.invalid && (nom.dirty || nom.touched) && nom.hasError('minlength')">
+      Le nom doit contenir au moins 2 caractères.
+    </mat-error>
+    <mat-error *ngIf="nom.invalid && (nom.dirty || nom.touched) && nom.hasError('maxlength')">
+      Le nom doit contenir au maximum 50 caractères.
+    </mat-error>
+  </form>
+  <!-- Formulaire de recherche (filtre) -->
+  <mat-form-field class="ml-auto">
+    <mat-label>Filtre</mat-label>
+    <input matInput (keyup)="applyFilter($event)" #input>
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+</div>
+
+
 <!--Table with pagination-->
 <div class="container-fluid">
   <div class="mat-elevation-z8">
-    <table mat-table [dataSource]="dataSource">
+    <table mat-table #tableForfaits [dataSource]="dataSourceForfaits" MatSort>
 
 
       <!-- code  -->
@@ -15,12 +45,6 @@
         <th mat-header-cell *matHeaderCellDef> Nom </th>
         <td mat-cell *matCellDef="let element"> {{element.nom}} </td>
       </ng-container>
-
-      <!-- description  
-      <ng-container matColumnDef="description">
-        <th mat-header-cell *matHeaderCellDef> Description </th>
-        <td mat-cell *matCellDef="let element"> {{element.description}} </td>
-      </ng-container>-->
 
       <!-- categories  -->
       <ng-container matColumnDef="categories">
@@ -64,12 +88,20 @@
         <td mat-cell *matCellDef="let element"> {{element.premium}} </td>
       </ng-container>
 
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> </th>
+        <td mat-cell *matCellDef="let forfait">
+          <button mat-icon-button aria-label="Supprimer" (click)="deleteForfait(forfait.id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+      <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
     </table>
 
-    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of forfaits">
-    </mat-paginator>
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of forfaits"></mat-paginator>
   </div>
 
 </div>
