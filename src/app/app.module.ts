@@ -47,9 +47,12 @@ import { ListeEtsHoteldeglaceComponent } from './liste-ets-hoteldeglace/liste-et
 import { MenuComponent } from './menu/menu.component';
 import { TableauForfaitsComponent } from './tableau-forfaits/tableau-forfaits.component';
 import { GestionForfaitsComponent } from './gestion-forfaits/gestion-forfaits.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 //providers
 import { ForfaitService } from './forfait.service';
+import { ForfaitMoinsCentComponent } from './forfait-moins-cent/forfait-moins-cent.component';
+import { AproposComponent } from './apropos/apropos.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +72,9 @@ import { ForfaitService } from './forfait.service';
     ListeEtsHoteldeglaceComponent,
     MenuComponent,
     TableauForfaitsComponent,
-    GestionForfaitsComponent
+    GestionForfaitsComponent,
+    ForfaitMoinsCentComponent,
+    AproposComponent
   ],
   imports: [
     BrowserModule,
@@ -97,7 +102,8 @@ import { ForfaitService } from './forfait.service';
     MatPaginatorModule,
     FontAwesomeModule,
     HttpClientModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDialogModule
   ],
   providers: [ 
     {provide:LOCALE_ID, useValue:'fr-CA'}, 

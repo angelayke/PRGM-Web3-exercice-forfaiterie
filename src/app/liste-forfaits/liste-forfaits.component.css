@@ -2,6 +2,7 @@
     display: block;
     background-color: rgb(255, 255, 255);
     padding: 1rem;
+
 }
 
 .example-container {
@@ -20,3 +21,4 @@
   .example-sidenav {
     padding: 20px;
   }
+

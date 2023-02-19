@@ -4,45 +4,40 @@
           <span routerLink="/">CaptainForfait</span><!-- idees de noms : PrimusForfait - DreamForfait -->
           <span class="example-spacer"></span>
 
-          <button mat-button routerLink="/forfaits">Forfaits</button>
-
+          <button mat-button routerLink="/">Accueil</button>
+          <button mat-button routerLink="/apropos">À propos</button>
+          
           <button mat-button [matMenuTriggerFor]="beforeMenu">Hôtels</button>
           <mat-menu #beforeMenu="matMenu" xPosition="before">
-          <button mat-menu-item routerLink="/hotelwhynot">Hôtel WhyNot</button>
-          <button mat-menu-item routerLink="/pourvoirielac">Pourvoirie du lac</button>
-          <button mat-menu-item routerLink="/hotelglace">Hôtel de Glace</button>
+            <button mat-menu-item routerLink="/hotelwhynot">Hôtel WhyNot</button>
+            <button mat-menu-item routerLink="/pourvoirielac">Pourvoirie du lac</button>
+            <button mat-menu-item routerLink="/hotelglace">Hôtel de Glace</button>
           </mat-menu>
       
-          <button mat-button [matMenuTriggerFor]="categories">Catégories</button>
-          <mat-menu #categories="matMenu" xPosition="before">
-          <button mat-menu-item>Hébergement</button>
-          <button mat-menu-item>Restauration</button>
-          <button mat-menu-item>Activités</button>
-          <button mat-menu-item>Détente</button>
-          </mat-menu>
+          <button mat-button>Forfait Y</button>
       
+          <button mat-button routerLink="/forfaits">Administration</button>
           <button mat-button routerLink="/contact">Contact</button>
-
+          
+        <!--Menu burger-->
           <span class="example-spacer"></span>
           <button mat-icon-button [matMenuTriggerFor]="menu" class="example-icon" aria-label="Example icon-button with menu icon">
             <mat-icon>menu</mat-icon>
           </button>
           <mat-menu #menu="matMenu">
-            <button mat-menu-item routerLink="/forfaits">Forfaits</button>
+            <button mat-menu-item routerLink="/">Accueil</button>
+            <button mat-menu-item routerLink="/apropos">À propos</button>
+
             <button mat-menu-item [matMenuTriggerFor]="hotel">Hôtels</button>
                 <mat-menu #hotel="matMenu">
                     <button mat-menu-item routerLink="/hotelwhynot">Hôtel WhyNot</button>
                     <button mat-menu-item routerLink="/pourvoirielac">Pourvoirie du lac</button>
                     <button mat-menu-item routerLink="/hotelglace">Hôtel de Glace</button>
                 </mat-menu>
-            <button mat-menu-item [matMenuTriggerFor]="categories">Catégories</button>
-                <mat-menu #categories="matMenu">
-                    <button mat-menu-item>Hébergement</button>
-                    <button mat-menu-item>Restauration</button>
-                    <button mat-menu-item>Activités</button>
-                    <button mat-menu-item>Détente</button>
-                </mat-menu>
-            <button mat-menu-item>Contact</button>
+            <button mat-menu-item >Forfait Y</button>
+
+            <button mat-menu-item routerLink="/forfaits">Administration</button>
+            <button mat-menu-item routerLink="/contact">Contact</button>
           </mat-menu>
         </mat-toolbar-row>
 

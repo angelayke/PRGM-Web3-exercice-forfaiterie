@@ -1,24 +1,28 @@
-import {AfterViewInit,Component, ViewChild} from '@angular/core';
-import {MatPaginator} from '@angular/material/paginator';
-import {MatSort} from '@angular/material/sort';
-import {MatTableDataSource} from '@angular/material/table';
-import {FORFAITS} from '../mock-forfaits';
+import {AfterViewInit,Component, OnInit, ViewChild} from '@angular/core';
 import {Forfait} from '../forfait';
 import {ForfaitService} from '../forfait.service';
+import {MatTable, MatTableDataSource} from '@angular/material/table';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatSort} from '@angular/material/sort';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { FormulaireForfaitComponent } from '../formulaire-forfait/formulaire-forfait.component';
+
+import {FORFAITS} from '../mock-forfaits';
 import { NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-tableau-forfaits',
   templateUrl: './tableau-forfaits.component.html',
   styleUrls: ['./tableau-forfaits.component.css']
 })
-export class TableauForfaitsComponent implements AfterViewInit {
+export class TableauForfaitsComponent implements OnInit {
   // 'nom', 'description', 'code', 'categories', 'etablissement', 'dateDebut', 'dateFin', 'prix',  'nouveauprix', 'avis', 'premium', 'color'
   //'position', 'name', 'weight', 'symbol'
-
-  columnsToDisplay = ['code', 'nom', 'categories', 'etablissement', 'dateDebut', 'dateFin', 'prix', 'nouveauprix', 'premium', 'actions'];
   dataSourceForfaits: MatTableDataSource < Forfait > = new MatTableDataSource(); 
+  columnsToDisplay = ['code', 'nom', 'categories', 'etablissement', 'dateDebut', 'dateFin', 'prix', 'nouveauprix', 'premium', 'actions'];
+ 
   displayedColumns: string[] = ['code', 'nom', 'categories', 'etablissement', 'dateDebut', 'dateFin', 'prix', 'nouveauprix', 'premium'];
   dataSource = new MatTableDataSource < Forfait > (FORFAITS);
 
@@ -37,7 +41,7 @@ export class TableauForfaitsComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private forfaitService: ForfaitService, private _snackBar: MatSnackBar) {}
+  constructor(private forfaitService: ForfaitService, private _snackBar: MatSnackBar, public dialog: MatDialog) {}
 
   ngAfterViewInit(): void {
     this.dataSource.sort = this.sort;
@@ -64,6 +68,7 @@ export class TableauForfaitsComponent implements AfterViewInit {
   getForfaits() { 
     this.forfaitService.getForfaits().subscribe(
       resultat => {
+        console.log(resultat);
         this.dataSourceForfaits = new MatTableDataSource(resultat);
         this.dataSourceForfaits.paginator = this.paginator;
         this.dataSourceForfaits.sort = this.sort;
@@ -71,6 +76,22 @@ export class TableauForfaitsComponent implements AfterViewInit {
     );
   }
 
+  openDialog(forfait?: Forfait) {
+    console.log(forfait);
+    const dialogRef = this.dialog.open(FormulaireForfaitComponent, {
+      data: forfait,
+      });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('Le dialog du formulaire de forfait a été fermé');
+      this._snackBar.open(result, undefined, {
+        duration: 2000
+      });
+      this.getForfaits();
+      });
+    }
+
+  //ceci devrait disparaitre avec le ngForm
   addForfait(forfaitFormAjout: NgForm) {
     if (forfaitFormAjout.valid) {
       this.forfaitService.addForfait(this.newForfait).subscribe(

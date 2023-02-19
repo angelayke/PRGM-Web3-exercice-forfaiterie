@@ -1,14 +1,17 @@
 <div class="flex-container">
+  <!--Formulaire d'ajout-->
   <form #forfaitFormAjout="ngForm">
     <mat-form-field>
       <mat-label>Forfait</mat-label>
       <input matInput placeholder="Ex. Forfait" required minlength="2" maxlength="50" name="nom" 
       [(ngModel)]="newForfait.nom" #nom="ngModel" (keyup.enter)="addForfait(forfaitFormAjout);">
     </mat-form-field>
-    <button mat-fab color="primary" aria-label="Ajouter" [disabled]="!forfaitFormAjout.form.valid"
+    <button mat-fab color="primary" aria-label="Ajouter" (click)="openDialog(undefined)" [disabled]="!forfaitFormAjout.form.valid"
     (click)="addForfait(forfaitFormAjout);">
       <mat-icon>add</mat-icon>
     </button>
+
+    <!--Validation error-->
     <mat-error *ngIf="nom.invalid && (nom.dirty || nom.touched) && nom.hasError('required')">
       Le nom est obligatoire.
     </mat-error>
@@ -19,6 +22,7 @@
       Le nom doit contenir au maximum 50 caractères.
     </mat-error>
   </form>
+
   <!-- Formulaire de recherche (filtre) -->
   <mat-form-field class="ml-auto">
     <mat-label>Filtre</mat-label>

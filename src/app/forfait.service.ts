@@ -11,6 +11,9 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class ForfaitService {
+  updateForfait(forfait: Forfait) {
+    throw new Error('Method not implemented.');
+  }
   API_URL = 'http://localhost/api-forfaits/';
 
   constructor(private http: HttpClient) { }
