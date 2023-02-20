@@ -23,14 +23,18 @@ export class FormulaireForfaitComponent implements OnInit {
     description: '',
     code: '',
     categories: [],
-    dateDebut: '',
-    dateFin: '',
+    dateDebut: '2023-02-19',
+    dateFin: '2023-02-26',
     prix: 0,
-    avis: []
+    avis: [], 
+    etablissement: {
+      nomEtablissement:''
+    }
   }
 
+  //constructor(private forfaitService: ForfaitService, public dialogRef: MatDialogRef<FormulaireForfaitComponent>, @Inject(MAT_DIALOG_DATA) public data: Forfait) {
   constructor(private forfaitService: ForfaitService, public dialogRef: MatDialogRef<FormulaireForfaitComponent>, @Inject(MAT_DIALOG_DATA) public data: Forfait) {
-    if (data) {
+      if (data) {
       this.forfait = data;
     }
    }
@@ -45,11 +49,12 @@ export class FormulaireForfaitComponent implements OnInit {
 
   addForfait(forfaitFormAjout: NgForm) {
     if (forfaitFormAjout.valid) {
+      console.log(this.forfait)
       this.forfaitService.addForfait(this.forfait).subscribe(
         _ => {
           forfaitFormAjout.resetForm();
          // this.forfaitAjoute.emit();
-          this.dialogRef.close("Forfait ajouté");
+          //this.dialogRef.close("Forfait ajouté");
         }
       );
     }
@@ -67,6 +72,6 @@ export class FormulaireForfaitComponent implements OnInit {
   // }
 
   annuler() {
-    this.dialogRef.close();
+    //this.dialogRef.close();
     }
 }

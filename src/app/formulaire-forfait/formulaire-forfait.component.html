@@ -1,49 +1,14 @@
-<!-- Formulaire d'ajout -->
-<form #forfaitFormAjout="ngForm">
-  <mat-form-field>
-    <mat-label>Forfait</mat-label>
-    <input matInput placeholder="Ex. Forfait balade" required minlength="2" maxlength="50" name="nom" [(ngModel)]="forfait.nom"
-      #nom="ngModel" (keyup.enter)="addForfait(forfaitFormAjout)">
-  </mat-form-field>
-
-
-  <div>
-<!--
-    <button *ngIf="forfait.nom; else boutonAjout" mat-button aria-label="Modifier"
-      [disabled]="!forfaitFormAjout.form.valid" (click)="updateForfait(forfaitFormAjout)">
-    Modifier
-    </button>
--->
-    <ng-template #boutonAjout>
-      <button mat-button mat-aria-label="Ajouter" [disabled]="!forfaitFormAjout.form.valid"
-        (click)="addForfait(forfaitFormAjout)">
-        Créer
-      </button>
-    </ng-template>
-
-    <button mat-button mat-aria-label="Annuler" (click)="annuler()"> Annuler</button>
-  </div>
-
-  <!-- Validations… mat-error -->
-  <mat-error *ngIf="nom.invalid && (nom.dirty || nom.touched) && nom.hasError('required')">
-    Le nom est obligatoire.
-  </mat-error>
-  <mat-error *ngIf="nom.invalid && (nom.dirty || nom.touched) && nom.hasError('minlength')">
-    Le nom doit contenir au moins 2 caractères.
-  </mat-error>
-  <mat-error *ngIf="nom.invalid && (nom.dirty || nom.touched) && nom.hasError('maxlength')">
-    Le nom doit contenir au maximum 50 caractères.
-  </mat-error>
-</form>
   
 <div class="form">
   <h2>Formulaire d'ajout d'un forfait</h2>
+
+  <form #formulaireForfait="ngForm">
  
   <mat-card>
     <mat-card-content>
       <section class="example-section">
         <label class="example-margin">Premium:</label>
-        <mat-radio-group [(ngModel)]="labelPosition">
+        <mat-radio-group name="premium" [(ngModel)]="labelPosition">
           <mat-radio-button class="example-margin" value="after">Oui</mat-radio-button>
           <mat-radio-button class="example-margin" value="before">Non</mat-radio-button>
         </mat-radio-group>
@@ -53,7 +18,7 @@
   <br>
     <mat-form-field appearance="fill">
       <mat-label>Nom du forfait</mat-label>
-      <input matInput>
+      <input matInput name="nom" #nom="ngModel" [(ngModel)]="forfait.nom">
     </mat-form-field>
   
   
@@ -67,7 +32,7 @@
     <mat-label>ÉTABLISSEMENT</mat-label><br>
       <mat-form-field appearance="fill">
         <mat-label>Nom de l'établissement</mat-label>
-        <input matInput>
+        <input matInput name="nomEtablissement" #nomEtablissement="ngModel" [(ngModel)]="forfait.etablissement.nomEtablissement">
       </mat-form-field><br>
       <mat-form-field appearance="fill">
         <mat-label>Adresse</mat-label>
@@ -119,4 +84,8 @@
     <mat-label>Nouveau prix</mat-label>
     <input matInput>
   </mat-form-field>
+
+  <button (click)="addForfait(formulaireForfait)">Ajouter</button>
+
+</form>
 </div>

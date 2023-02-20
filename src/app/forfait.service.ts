@@ -11,9 +11,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class ForfaitService {
-  updateForfait(forfait: Forfait) {
-    throw new Error('Method not implemented.');
-  }
+ 
   API_URL = 'http://localhost/api-forfaits/';
 
   constructor(private http: HttpClient) { }
@@ -26,7 +24,11 @@ export class ForfaitService {
     return this.http.post<void>(this.API_URL, forfait, httpOptions);
   }
 
+  updateForfait(forfait: Forfait) {
+    return this.http.put<void>(`${this.API_URL}/${forfait.nom}`, forfait, httpOptions);
+  }
+
   deleteForfait(id: string): Observable<void> {
-    return this.http.delete<void>(`${this.API_URL}/${id}`);
+    return this.http.delete<void>(`${this.API_URL}?id=${id}`);
   }
 }

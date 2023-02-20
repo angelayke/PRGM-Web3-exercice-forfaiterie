@@ -6,7 +6,7 @@ export interface Forfait {
     description: string;
     code: string;
     categories: string[];
-    etablissement?: Etablissement;
+    etablissement: Etablissement;
     dateDebut: string;
     dateFin: string; 
     prix: number;

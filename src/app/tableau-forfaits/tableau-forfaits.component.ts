@@ -26,7 +26,7 @@ export class TableauForfaitsComponent implements OnInit {
   displayedColumns: string[] = ['code', 'nom', 'categories', 'etablissement', 'dateDebut', 'dateFin', 'prix', 'nouveauprix', 'premium'];
   dataSource = new MatTableDataSource < Forfait > (FORFAITS);
 
-  newForfait: Forfait = {
+  forfait: Forfait = {
     code: '',
     nom: '',
     categories: [],
@@ -35,7 +35,10 @@ export class TableauForfaitsComponent implements OnInit {
     dateFin: '',
     prix: 0,
     nouveauprix: 0,
-    avis: []
+    avis: [], 
+    etablissement : {
+      nomEtablissement:''
+    }
   }
  
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -94,7 +97,7 @@ export class TableauForfaitsComponent implements OnInit {
   //ceci devrait disparaitre avec le ngForm
   addForfait(forfaitFormAjout: NgForm) {
     if (forfaitFormAjout.valid) {
-      this.forfaitService.addForfait(this.newForfait).subscribe(
+      this.forfaitService.addForfait(this.forfait).subscribe(
         _ => {
           forfaitFormAjout.resetForm();
           this.getForfaits();
