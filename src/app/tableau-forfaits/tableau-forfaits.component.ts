@@ -101,6 +101,9 @@ export class TableauForfaitsComponent implements OnInit {
         _ => {
           forfaitFormAjout.resetForm();
           this.getForfaits();
+          this._snackBar.open("Forfait ajouté!", undefined, {
+            duration: 2000
+          });
         }
       );
     }

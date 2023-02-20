@@ -18,22 +18,23 @@
   <br>
     <mat-form-field appearance="fill">
       <mat-label>Nom du forfait</mat-label>
-      <input matInput name="nom" #nom="ngModel" [(ngModel)]="forfait.nom">
+      <input matInput name="nom" #nom="ngModel" [(ngModel)]="forfait.nom" required>
     </mat-form-field>
   
   
   <br>
   <mat-form-field appearance="fill">
     <mat-label>Description</mat-label>
-    <textarea matInput></textarea>
+    <textarea matInput name="description" #description="ngModel" [(ngModel)]="forfait.description" required></textarea>
   </mat-form-field>
   <br>
   <div>
-    <mat-label>ÉTABLISSEMENT</mat-label><br>
+     <!--<mat-label>ÉTABLISSEMENT</mat-label><br> -->
       <mat-form-field appearance="fill">
         <mat-label>Nom de l'établissement</mat-label>
-        <input matInput name="nomEtablissement" #nomEtablissement="ngModel" [(ngModel)]="forfait.etablissement.nomEtablissement">
+        <input matInput name="nomEtablissement" #nomEtablissement="ngModel" [(ngModel)]="forfait.etablissement.nomEtablissement" required>
       </mat-form-field><br>
+  <!--
       <mat-form-field appearance="fill">
         <mat-label>Adresse</mat-label>
         <input matInput>
@@ -58,6 +59,7 @@
         <mat-label>Description de l'établissement</mat-label>
         <textarea matInput rows="5" cols="40" class="textarea-full-width"></textarea>
       </mat-form-field>
+    -->
   </div>
   <br>
   <mat-form-field appearance="fill" class="example-form-field">
@@ -70,22 +72,22 @@
     <mat-datepicker-toggle matSuffix [for]="rangePicker"></mat-datepicker-toggle>
     <mat-date-range-picker #rangePicker>
       <mat-date-range-picker-actions>
-        <button mat-button matDateRangePickerCancel>Cancel</button>
-        <button mat-raised-button color="primary" matDateRangePickerApply>Apply</button>
+        <button mat-button matDateRangePickerCancel>Annuler</button>
+        <button mat-raised-button color="primary" matDateRangePickerApply>Appliquer</button>
       </mat-date-range-picker-actions>
     </mat-date-range-picker>
   </mat-form-field>
   <br>
   <mat-form-field appearance="fill">
     <mat-label>Prix</mat-label>
-    <input matInput>
+    <input matInput name="prix" #prix="ngModel" [(ngModel)]="forfait.prix" required>
   </mat-form-field>
   <mat-form-field appearance="fill" class="space">
     <mat-label>Nouveau prix</mat-label>
-    <input matInput>
+    <input matInput name="nouveauprix" #nouveauprix="ngModel" [(ngModel)]="forfait.nouveauprix" required>
   </mat-form-field>
-
-  <button (click)="addForfait(formulaireForfait)">Ajouter</button>
+<br>
+  <button mat-button (click)="addForfait(formulaireForfait)">Ajouter</button>
 
 </form>
 </div>
