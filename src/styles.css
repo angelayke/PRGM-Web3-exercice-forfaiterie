@@ -80,3 +80,7 @@ body {
   margin: 8px 0;
   display: block;
 }
+
+.img-fluid {
+  width: 100%;
+}

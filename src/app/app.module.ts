@@ -48,11 +48,14 @@ import { MenuComponent } from './menu/menu.component';
 import { TableauForfaitsComponent } from './tableau-forfaits/tableau-forfaits.component';
 import { GestionForfaitsComponent } from './gestion-forfaits/gestion-forfaits.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { NgChartsModule } from 'ng2-charts';
 
 //providers
 import { ForfaitService } from './forfait.service';
+
 import { ForfaitMoinsCentComponent } from './forfait-moins-cent/forfait-moins-cent.component';
 import { AproposComponent } from './apropos/apropos.component';
+import { Grafik1Component } from './grafik1/grafik1.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +77,8 @@ import { AproposComponent } from './apropos/apropos.component';
     TableauForfaitsComponent,
     GestionForfaitsComponent,
     ForfaitMoinsCentComponent,
-    AproposComponent
+    AproposComponent,
+    Grafik1Component
   ],
   imports: [
     BrowserModule,
@@ -103,7 +107,8 @@ import { AproposComponent } from './apropos/apropos.component';
     FontAwesomeModule,
     HttpClientModule,
     MatSnackBarModule,
-    MatDialogModule
+    MatDialogModule,
+    NgChartsModule
   ],
   providers: [ 
     {provide:LOCALE_ID, useValue:'fr-CA'}, 
