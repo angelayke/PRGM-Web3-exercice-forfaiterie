@@ -29,9 +29,9 @@ export class Grafik1Component implements OnInit {
       }
     };
     public pieChartData: ChartData<'pie', number[], string | string[]> = {
-      labels: [ [ 'Download', 'Sales' ], [ 'In', 'Store', 'Sales' ], 'Mail Sales' ],
+      labels: [  'Hébergement', 'Restauration', 'Activités', 'Détente' ], //[ 'Hébergement', Sales], [ 'Restauration', 'Activités'], 'Détente' ],
       datasets: [ {
-        data: [ 300, 500, 100 ]
+        data: [ 300, 400, 200, 100 ]
       } ]
     };
     public pieChartType: ChartType = 'pie';
