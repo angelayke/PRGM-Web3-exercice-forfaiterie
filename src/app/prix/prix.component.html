@@ -2,7 +2,7 @@
     <div *ngIf="nouveauprix; else elseBlock">
         <p [ngClass]="'color'">{{nouveauprix}}$</p>
         <h4 [ngClass]="'line'">{{prix}}$</h4>
-        <p>Montant économisé: {{prix-nouveauprix}} $</p>
+        <p><em> Montant économisé: {{prix-nouveauprix}} $</em></p>
     </div>
     <ng-template #elseBlock><p [ngClass]="'prix'">{{prix}}$</p></ng-template>
 </div>
