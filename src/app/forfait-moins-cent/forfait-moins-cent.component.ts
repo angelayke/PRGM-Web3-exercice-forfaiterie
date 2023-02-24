@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,  OnInit } from '@angular/core'; //Input,
+import { Forfait } from '../forfait';
+import { ForfaitService } from '../forfait.service';
 
 @Component({
   selector: 'app-forfait-moins-cent',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ForfaitMoinsCentComponent implements OnInit {
 
-  constructor() { }
+ forfaits : Forfait[] = []; // FORFAITS;
+
+  constructor(private forfaitService: ForfaitService) { }
 
   ngOnInit(): void {
+    this.getForfaits();
   }
 
+  getForfaits(): void {
+    this.forfaitService.getForfaits()
+      .subscribe(resultat => this.forfaits = resultat);
+  }
 }

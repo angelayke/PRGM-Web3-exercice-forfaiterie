@@ -1,1 +1,4 @@
-<p>forfait-moins-cent works!</p>
+
+<div *ngFor="let forfait of forfaits | qteMoinsCent">
+    <app-forfait [forfait]="forfait"></app-forfait>
+</div>

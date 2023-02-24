@@ -20,7 +20,11 @@
       <mat-label>Nom du forfait</mat-label>
       <input matInput name="nom" #nom="ngModel" [(ngModel)]="forfait.nom" required>
     </mat-form-field>
-  
+  <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Code</mat-label>
+      <input matInput name="code" #nom="ngModel" [(ngModel)]="forfait.code" placeholder="AAA000" required>
+    </mat-form-field>
   
   <br>
   <mat-form-field appearance="fill">

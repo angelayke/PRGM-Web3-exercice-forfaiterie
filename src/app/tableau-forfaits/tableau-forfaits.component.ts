@@ -94,7 +94,7 @@ export class TableauForfaitsComponent implements OnInit {
       });
     }
 
-  //ceci devrait disparaitre avec le ngForm
+  //ceci devrait disparaitre 
   // addForfait(forfaitFormAjout: NgForm) {
   //   if (forfaitFormAjout.valid) {
   //     this.forfaitService.addForfait(this.forfait).subscribe(
