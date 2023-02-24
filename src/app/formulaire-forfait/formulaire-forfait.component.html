@@ -90,13 +90,13 @@
 <!--Boutons-->
  
     <button *ngIf="forfait.id else boutonAjout" mat-button aria-label="Modifier"
-      [disabled]="!forfaitFormAjout.form.valid" (click)="updateForfait(forfaitFormAjout)">
+      [disabled]="!formulaireForfait.form.valid" (click)="updateForfait(formulaireForfait)">
       Modifier
     </button>
     <ng-template #boutonAjout>
       <!--<button mat-button mat-aria-label="Ajouter" (click)="addForfait(formulaireForfait)">Ajouter</button>-->
-      <button mat-button mat-aria-label="Ajouter" [disabled]="!forfaitFormAjout.form.valid"
-      (click)="addForfait(forfaitFormAjout)">Créer</button>
+      <button mat-button mat-aria-label="Ajouter" [disabled]="!formulaireForfait.form.valid"
+      (click)="addForfait(formulaireForfait)">Créer</button>
     </ng-template>  
   
   <button mat-button mat-aria-label="Annuler" (click)="annuler()">Annuler</button>

@@ -95,19 +95,19 @@ export class TableauForfaitsComponent implements OnInit {
     }
 
   //ceci devrait disparaitre avec le ngForm
-  addForfait(forfaitFormAjout: NgForm) {
-    if (forfaitFormAjout.valid) {
-      this.forfaitService.addForfait(this.forfait).subscribe(
-        _ => {
-          forfaitFormAjout.resetForm();
-          this.getForfaits();
-          this._snackBar.open("Forfait ajouté!", undefined, {
-            duration: 2000
-          });
-        }
-      );
-    }
-  }
+  // addForfait(forfaitFormAjout: NgForm) {
+  //   if (forfaitFormAjout.valid) {
+  //     this.forfaitService.addForfait(this.forfait).subscribe(
+  //       _ => {
+  //         forfaitFormAjout.resetForm();
+  //         this.getForfaits();
+  //         this._snackBar.open("Forfait ajouté!", undefined, {
+  //           duration: 2000
+  //         });
+  //       }
+  //     );
+  //   }
+  // }
 
   deleteForfait(id: string) {
     this.forfaitService.deleteForfait(id).subscribe(
@@ -118,6 +118,13 @@ export class TableauForfaitsComponent implements OnInit {
         });
       }
     );
+  }
+
+  forfaitAjoute() { 
+    this.getForfaits();
+    this._snackBar.open("Forfait ajouté!", undefined, {
+      duration: 2000
+    });
   }
 
   applyFilter(event: Event) {

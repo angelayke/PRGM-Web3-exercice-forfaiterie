@@ -2,6 +2,7 @@ import { Etablissement } from "./etablissement";
 import { Avis } from "./avis";
 
 export interface Forfait {
+    id?: number;
     nom: string;
     description: string;
     code: string;
