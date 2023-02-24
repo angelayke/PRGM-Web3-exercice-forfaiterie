@@ -49,29 +49,29 @@ export class FormulaireForfaitComponent implements OnInit {
 
   addForfait(forfaitFormAjout: NgForm) {
     if (forfaitFormAjout.valid) {
-      console.log(this.forfait)
+    //  console.log(this.forfait)
       this.forfaitService.addForfait(this.forfait).subscribe(
         _ => {
           forfaitFormAjout.resetForm();
          // this.forfaitAjoute.emit();
-          //this.dialogRef.close("Forfait ajouté");
+          this.dialogRef.close("Forfait ajouté");
         }
       );
     }
   }
 
-  // updateForfait(forfaitFormAjout: NgForm) {
-  //   if (forfaitFormAjout.valid) {
-  //     this.forfaitService.updateForfait(this.forfait).subscribe(
-  //     _ => {
-  //       forfaitFormAjout.resetForm();
-  //       this.dialogRef.close("Forfait modifié");
-  //       }
-  //     );
-  //   }
-  // }
+   updateForfait(forfaitFormAjout: NgForm) {
+     if (forfaitFormAjout.valid) {
+       this.forfaitService.updateForfait(this.forfait).subscribe(
+       _ => {
+         forfaitFormAjout.resetForm();
+         this.dialogRef.close("Forfait modifié");
+         }
+       );
+     }
+  }
 
   annuler() {
-    //this.dialogRef.close();
+    this.dialogRef.close();
     }
 }
