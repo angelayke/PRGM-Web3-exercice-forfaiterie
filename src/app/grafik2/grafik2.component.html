@@ -1,0 +1,19 @@
+<h3>VISITES TOURISTIQUES <em>(Graphique 2)</em></h3>
+<p>Durée de chaque visite</p>
+<div id="grafik2">
+    <!--<canvas class="chart" baseChart
+            [data]="barChartData"
+            [options]="barChartOptions"
+            [type]="barChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)">
+    </canvas>-->
+    <canvas baseChart class="chart"
+        [data]="barChartData"
+        [options]="barChartOptions"
+        [plugins]="barChartPlugins"
+        [type]="barChartType"
+        (chartHover)="chartHovered($event)"
+        (chartClick)="chartClicked($event)">
+</canvas>
+</div>

@@ -57,6 +57,7 @@ import { ForfaitMoinsCentComponent } from './forfait-moins-cent/forfait-moins-ce
 import { AproposComponent } from './apropos/apropos.component';
 import { Grafik1Component } from './grafik1/grafik1.component';
 import { QteMoinsCentPipe } from './qte-moins-cent.pipe';
+import { Grafik2Component } from './grafik2/grafik2.component';
 
 @NgModule({
   declarations: [
@@ -80,7 +81,8 @@ import { QteMoinsCentPipe } from './qte-moins-cent.pipe';
     ForfaitMoinsCentComponent,
     AproposComponent,
     Grafik1Component,
-    QteMoinsCentPipe
+    QteMoinsCentPipe,
+    Grafik2Component
   ],
   imports: [
     BrowserModule,
