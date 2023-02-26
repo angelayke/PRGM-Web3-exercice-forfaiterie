@@ -21,9 +21,8 @@
   <div>
     Choix de type de forfait: {{categorie}} {{etablissement}}
   </div>
-  <app-forfait *ngFor="let f of forfaits" [forfait]="f"></app-forfait>
+  <app-forfait *ngFor="let f of forfaits" [forfait]="f" ></app-forfait> <!--[ngClass]="{'premium' : forfaits.premium}"-->
 
  
 </mat-drawer-container>
 </div>
-
